@@ -6,7 +6,7 @@
 #    By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:43:01 by maguimar          #+#    #+#              #
-#    Updated: 2022/11/02 16:43:02 by maguimar         ###   ########.fr        #
+#    Updated: 2022/11/07 14:15:42 by maguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,34 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_isalpha.c
+SRC = ft_isalpha.c \
+		ft_atoi.c \
+		ft_strlen.c \
+		ft_strlcat.c \
+		ft_bzero.c \
+		ft_isalnum.c \
+		ft_isdigit.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memset.c \
+		ft_strchr.c \
+		ft_strlcpy.c \
+		ft_strnstr.c \
+		ft_strrchr.c \
+		ft_tolower.c \
+		ft_toupper.c \
+
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 clean:

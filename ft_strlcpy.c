@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 10:55:51 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/07 11:56:27 by maguimar         ###   ########.fr       */
+/*   Created: 2022/11/07 11:28:23 by maguimar          #+#    #+#             */
+/*   Updated: 2022/11/07 13:22:18 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 'a' && c <= 'z')
-		c += 32;
-	return (c);
+	size_t	i;
+	size_t len;
+
+	i = 0;
+	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
+	while ((i < size - 1) && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
 }
