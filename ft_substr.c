@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 10:55:44 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/08 16:38:52 by maguimar         ###   ########.fr       */
+/*   Created: 2022/11/08 14:58:54 by maguimar          #+#    #+#             */
+/*   Updated: 2022/11/08 16:36:45 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char	*substring;
+	int	i;
 
-	if (!(*little))
-		return ((char *)big);
 	i = 0;
-	j = 0;
-	while (i < len && *(big + i) != '\0')
+	if (s == NULL)
+		return (NULL);
+
+	if (start >= len)
+		len = 0;
+	substring = malloc(sizeof(char) * (len + 1));
+	if (!substring)
+		return (NULL);
+
+	while (s[i + start] && i + start < start + len)
 	{
-		while (*(big + i + j) == *(little + j)
-			&& *(little + j) != '\0' && *(big + i + j) != '\0' && i + j < len)
-			j++;
-		if (*(little + j) == '\0')
-			return ((char *)(big + i));
-		j = 0;
+		substring[i] = s[i + start];
 		i++;
 	}
-	return (0);
+	substring[i] = '\0';
+	return (substring);
 }
