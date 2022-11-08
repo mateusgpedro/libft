@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:03:35 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/07 11:44:17 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:23:44 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	pt_dest = (char *)dest;
 	pt_src = (char *)src;
+	if(!dest && !src)
+		return (NULL);
 	if (pt_src > pt_dest)
 	{
 		while (i <= n)
@@ -37,7 +39,7 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	return (pt_dest);
+	return (dest);
 }
 
 /*

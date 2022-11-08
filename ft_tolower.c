@@ -6,13 +6,13 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:55:56 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/07 11:56:26 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/07 14:59:36 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c -= 32;
+		c += 32;
 	return (c);
 }

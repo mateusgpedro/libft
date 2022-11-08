@@ -6,18 +6,18 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:56:02 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/07 11:56:23 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/07 14:37:27 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int len;
+	int	len;
 
 	len = ft_strlen(s);
-	if  (len == 0)
+	if (len == 0)
 		return (&((char *)s)[len]);
 
 	while(len > 0)

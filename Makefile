@@ -6,7 +6,7 @@
 #    By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:43:01 by maguimar          #+#    #+#              #
-#    Updated: 2022/11/07 14:15:42 by maguimar         ###   ########.fr        #
+#    Updated: 2022/11/08 14:30:03 by maguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,9 @@ SRC = ft_isalpha.c \
 		ft_strrchr.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		ft_strncmp.c \
+		ft_calloc.c \
+		ft_strdup.c \
 
 
 OBJ = $(SRC:.c=.o)
@@ -53,3 +56,7 @@ fclean: clean
 	rm -rf $(OBJ)
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

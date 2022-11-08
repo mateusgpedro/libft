@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:56:45 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/07 14:16:51 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:54:07 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		return (0);
 	}
-	while (i < n && cs1[i] == cs2[i])
+	while (i < n - 1 && cs1[i] == cs2[i])
 	{
 		i++;
 	}
