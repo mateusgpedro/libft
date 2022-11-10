@@ -1,56 +1,87 @@
-//
-// Created by Mateus Pedro on 09/11/2022.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/10 11:26:07 by maguimar          #+#    #+#             */
+/*   Updated: 2022/11/10 12:12:25 by maguimar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 static int  words_length(char const *s, char c)
 {
-    int i;
-    int count;
-    while (s[i])
-    {
-        if(s1[i] == c)
-        {
-            i++;
-            continue;
-        }
-        count++;
-        i++;
-    }
-    return (count);
+	int	size;
+	int	pos;
+
+	size = 0;
+	pos = 0;
+	while (*s && *s == c)
+		s++;
+	while (s[pos])
+	{
+		if (!pos)
+			size++;
+		else if (s[pos - 1] == c && s[pos] != c)
+			size++;
+		pos++;
+	}
+	return (size);
+
+	/* int i;
+	int count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if(s[i] == c)
+		{
+			i++;
+			continue;
+		}
+		if(s[i] != c)
+			count++;
+		i++;
+	}
+	return (count); */
+
 }
 
 static int	word_position(char const *str, char c)
 {
-    int	position;
+	int	position;
 
-    position = 0;
-    while (str[position] && str[position] != c)
-        position++;
-    return (position);
+	position = 0;
+	while (str[position] && str[position] != c)
+		position++;
+	return (position);
 }
 
 char **ft_split(char const *s, char c)
 {
-    char **new_strings;
-    int i;
-    int array_size;
-    int start_pos;
+	char **new_strings;
+	int i;
+	int array_size;
+	int limit;
 
-    array_size = words_length(s, c);
-    new_strings = malloc(sizeof(char *) * (array_s  ize + 1));
-    if (!new_strings)
-        return (NULL);
-    while (i < array_size)
-    {
-        while (*s && *s == c)
-            s++;
-        start_pos = word_position(s, c);
-        new_strings[i] = ft_substr(s, 0, );
-        s += limit + 1;
-        i++;
-    }
-    new_strings[array_size] = '\0';
-    return (new_strings);
+	array_size = words_length(s, c);
+	new_strings = malloc(sizeof(char *) * (array_size + 1));
+	if (!new_strings)
+		return (NULL);
+	i = 0;
+	while (i < array_size)
+	{
+		while (*s && *s == c)
+			s++;
+		limit = word_position(s, c);
+		new_strings[i] = ft_substr(s, 0, limit);
+		s += limit + 1;
+		i++;
+	}
+	new_strings[array_size] = NULL;
+	return (new_strings);
 }
