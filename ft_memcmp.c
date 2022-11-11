@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:56:45 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/08 13:54:07 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:18:24 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *cs1;
-	unsigned char *cs2;
-	size_t i;
+	unsigned char	*cs1;
+	unsigned char	*cs2;
+	size_t			i;
 
 	cs1 = (unsigned char *) s1;
 	cs2 = (unsigned char *) s2;

@@ -6,13 +6,13 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:26:07 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 12:12:25 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:31:02 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int  words_length(char const *s, char c)
+static int	words_length(char const *s, char c)
 {
 	int	size;
 	int	pos;
@@ -30,25 +30,6 @@ static int  words_length(char const *s, char c)
 		pos++;
 	}
 	return (size);
-
-	/* int i;
-	int count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if(s[i] == c)
-		{
-			i++;
-			continue;
-		}
-		if(s[i] != c)
-			count++;
-		i++;
-	}
-	return (count); */
-
 }
 
 static int	word_position(char const *str, char c)
@@ -61,12 +42,12 @@ static int	word_position(char const *str, char c)
 	return (position);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **new_strings;
-	int i;
-	int array_size;
-	int limit;
+	char	**new_strings;
+	int		i;
+	int		array_size;
+	int		limit;
 
 	array_size = words_length(s, c);
 	new_strings = malloc(sizeof(char *) * (array_size + 1));

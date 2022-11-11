@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:24:59 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/08 11:45:50 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:24:02 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-
 
 	i = 0;
 	while ((s1[i] || s2[i]) && (i < n))

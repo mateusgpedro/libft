@@ -6,16 +6,16 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:04:30 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 15:35:02 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:19:45 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 /*   ---First Part---   */
 int		ft_isalpha(int c);
@@ -58,7 +58,7 @@ void	ft_putnbr_fd(int n, int fd);
 /*   ---Bonus---   */
 typedef struct s_list
 {
-	void 			*content;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 

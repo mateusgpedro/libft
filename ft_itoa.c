@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:25:49 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 13:58:49 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:20:05 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static int	get_length(long n)
 
 char	*ft_itoa(int n)
 {
-	char *str;
+	char	*str;
 	long	num;
-	int len;
+	int		len;
 
 	num = n;
 	len = get_length(num);
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		num *= -1;
 	}
-	while(num > 0)
+	while (num > 0)
 	{
 		str[len] = (48 + (num % 10));
 		num /= 10;

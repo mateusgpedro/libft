@@ -6,15 +6,15 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:46:52 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 11:50:56 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:32:41 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *ft_strncpy(char *dst, const char *src, int n)
+static char	*ft_strncpy(char *dst, const char *src, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
@@ -33,11 +33,11 @@ static char *ft_strncpy(char *dst, const char *src, int n)
 	return (dst);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *new;
-	size_t beginning;
-	size_t end;
+	char	*new;
+	size_t	beginning;
+	size_t	end;
 
 	beginning = 0;
 	if (!s1 || !set)
@@ -46,7 +46,8 @@ char *ft_strtrim(char const *s1, char const *set)
 		beginning++;
 	end = ft_strlen(s1 + beginning);
 	if (end)
-		while (s1[end + beginning - 1] != 0 && ft_strchr(set, s1[end + beginning - 1]) != 0)
+		while (s1[end + beginning - 1] != 0
+			&& ft_strchr(set, s1[end + beginning - 1]) != 0)
 			end--;
 	new = malloc(sizeof(char) * end + 1);
 	if (new == NULL)

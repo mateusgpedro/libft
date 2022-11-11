@@ -6,13 +6,13 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:53:35 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 14:56:28 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:16:09 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 

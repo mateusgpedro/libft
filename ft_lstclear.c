@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:07:28 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 15:32:48 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:24:50 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *node;
+	t_list	*node;
 
 	node = *lst;
 	if (!*lst)
 		return ;
-	while (node )
+	while (node)
 	{
 		node = (*lst)->next;
 		ft_lstdelone((*lst), del);

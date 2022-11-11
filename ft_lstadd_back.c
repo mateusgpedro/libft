@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 13:32:10 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 14:06:23 by maguimar         ###   ########.fr       */
+/*   Created: 2022/11/11 16:35:11 by maguimar          #+#    #+#             */
+/*   Updated: 2022/11/11 16:38:18 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	*ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *node;
+	t_list	*node;
 
-	node = *lst;
-	if (!new)
-		return (NULL);
-	if (!*lst)
+	if (*lst == NULL)
 	{
 		*lst = new;
 		return (NULL);
 	}
-	node = ft_lstlast(node);
+	node = *lst;
+	while (node && node->next)
+		node = node->next;
 	node->next = new;
 	return (NULL);
 }

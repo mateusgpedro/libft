@@ -6,13 +6,13 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:49:41 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/08 17:22:43 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:17:51 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_string;
 	size_t	s1_len;
@@ -25,18 +25,5 @@ char *ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_memcpy(new_string, s1, s1_len);
 	ft_memcpy(new_string + s1_len, s2, s2_len + 1);
-	// while (*s1)
-	// {
-	// 	*new_string = *s1;
-	// 	new_string++;
-	// 	s1++;
-	// }
-	// while (*s2)
-	// {
-	// 	*new_string = *s2;
-	// 	new_string++;
-	// 	s2++;
-	// }
-	// *new_string = '\0';
 	return (new_string);
 }

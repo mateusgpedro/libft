@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/08 16:40:07 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
-	int	len;
-	int	i;
+	int		len;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(s);

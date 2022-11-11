@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:57:43 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 15:23:38 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:31:26 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-
-
-	if(n == -2147483648)
+	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putchar_fd('2', fd);
