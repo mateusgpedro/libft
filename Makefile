@@ -6,7 +6,7 @@
 #    By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:43:01 by maguimar          #+#    #+#              #
-#    Updated: 2022/11/10 15:08:20 by maguimar         ###   ########.fr        #
+#    Updated: 2022/11/11 15:28:32 by maguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,16 @@ SRC = ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 
 OBJ = $(SRC:.c=.o)
