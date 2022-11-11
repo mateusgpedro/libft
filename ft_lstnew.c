@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:03:25 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/10 14:23:38 by maguimar         ###   ########.fr       */
+/*   Created: 2022/11/10 15:36:35 by maguimar          #+#    #+#             */
+/*   Updated: 2022/11/10 15:55:21 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
-	int	len;
-	char *new_string;
+	t_list *node;
 
-	i = 0;
-	len = ft_strlen(s);
-	new_string = malloc(sizeof(char) *  (len + 1));
-	if (!new_string)
+	node = malloc(sizeof(t_list))
+	if (!node)
 		return (NULL);
-	while (i < len)
-	{
-		new_string[i] = (*f)(i, s[i]);
-		i++;
-	}
-	new_string[i] = '\0';
-	return (new_string);
+	node->content = content;
+	node->next = NULL;
 }
