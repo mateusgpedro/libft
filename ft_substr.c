@@ -6,7 +6,7 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:58:54 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:35:41 by maguimar         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:07:45 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substring;
-	int		i;
+	size_t	i;
+	char	*ptr;
 
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!ptr || !s)
+		return (0);
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	if (start >= len)
-		len = 0;
-	substring = malloc(sizeof(char) * (len + 1));
-	if (!substring)
-		return (NULL);
-	while (s[i + start] && i + start < start + len)
+	while (len > i && *(s + start + i) != '\0' && start < ft_strlen((char *)s))
 	{
-		substring[i] = s[i + start];
+		ptr[i] = *(s + start + i);
 		i++;
 	}
-	substring[i] = '\0';
-	return (substring);
+	ptr[i] = '\0';
+	return (ptr);
 }

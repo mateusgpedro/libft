@@ -6,7 +6,7 @@
 #    By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:43:01 by maguimar          #+#    #+#              #
-#    Updated: 2022/11/11 17:40:18 by maguimar         ###   ########.fr        #
+#    Updated: 2022/11/15 13:11:14 by maguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,7 @@ SRC = ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c \
 		ft_strncmp.c ft_calloc.c ft_strdup.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c 	ft_putstr_fd.c \
-		ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstadd_front.c \
-		ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-		ft_lstclear.c ft_lstiter.c ft_lstmap.c
-
+		ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -46,7 +43,6 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
-	rm -rf $(OBJ)
 
 re: fclean all
 
